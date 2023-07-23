@@ -736,3 +736,22 @@ XeonBotIncBot()
 process.on('uncaughtException', function (err) {
 console.log('Caught exception: ', err)
 })
+
+// Import required modules
+const express = require('express');
+
+// Create an instance of Express
+const app = express();
+
+// Define a sample route
+app.get('/', (req, res) => {
+  res.send('Hello, BOT!');
+});
+
+// Set the port for the server to listen on
+const port = 3000; // You can change this to any valid port number
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
